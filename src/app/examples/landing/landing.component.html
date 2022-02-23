@@ -1,0 +1,49 @@
+<div class="wrapper">
+    <div class="page-header page-header-small">
+        <div class="page-header-image rellax-header" data-rellax-speed="-8" style="background-image: url('assets/img/header.jpg');">
+        </div>
+        <div class="container">
+            <div class="content-center">
+                <h1 class="title">Bienvenue dans votre Salon</h1>
+            </div>
+        </div>
+    </div>
+    <div class="section section-about-us">
+        <div class="card-header text-black text-center">Les Tarifs</div>
+        <div class="col-md-8 offset-md-3">
+  <table >
+  <thead>
+      <tr> 
+          <th>Libellé</th>
+        <th>Type</th>
+        <th>Prix</th>
+        <div class="col-md-8 offset-md-3">
+            <th>Actions</th>
+        </div>
+      </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor = "let tarif of tarifs">
+          <td>{{tarif.libelle}}</td>
+          <td>{{tarif.type}}</td>
+          <td>{{tarif.prix}}</td>
+        
+          
+
+         
+          <td>
+              <button (click) = "updateTarif(tarif.id)" class = "btn btn-info" style="margin-left: 1em" style="margin-top: 10px" > Modifier</button>
+            
+              <button (click) = "deleteTarif(tarif.id)" class = "btn btn-danger" style="margin-left: 1em" style="margin-top: 3px"> Supprimer</button>
+          </td>
+      </tr>
+      <button  [routerLink]="['/create-tarif']" class = "btn btn-success" type ="submit" >Ajouter tarif</button>
+
+  </tbody>
+</table>
+
+
+    </div>
+</div>
+    
+</div>

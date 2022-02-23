@@ -1,0 +1,34 @@
+<div class="col-md-8 offset-md-3">
+    <h3> Modifiers les tarifs </h3>
+    <form (ngSubmit) = "onSubmit()">
+        <div class="form-group">
+            
+        <div class="col-md-6 mb-3">   
+        
+            <label>libelle</label>
+            <input type="text" class ="form-control" placeholder = "libelle"
+            [(ngModel)] = "tarif.libelle"  name = "libelle">
+        </div>
+        
+        <div class="form-group">
+        <div class="col-md-6 mb-3">
+            <label><strong>Type</strong></label>
+            <select class="form-control">
+                <option value="default"> Choisir un type</option>
+                <option value="cheveux longs">cheveux longs</option>
+                <option value="cheveux mi-longs">cheveux mi-longs</option>
+                <option value="cheveux courts">cheveux courts</option>
+               
+            </select>
+         
+        </div>
+        </div>
+        <div class="col-md-6 mb-3">
+               <label>Prix</label>
+            <input type="text" class ="form-control" placeholder = "prix"
+            [(ngModel)] = "tarif.prix" name = "prix">
+        </div>
+        </div>
+    <button class = "btn btn-success" type ="submit">Modifier</button>
+    </form>
+    </div>
